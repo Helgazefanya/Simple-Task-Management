@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "d835737c-f054-4cec-8e98-ed8e8698d742",
+		"name": "Task Management API - Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49197896",
+		"_collection_link": "https://helgazefanyas-9527955.postman.co/workspace/Helga-Zefanya's-Workspace~87a91343-1629-470b-8d0d-518b8955f389/collection/49197896-d835737c-f054-4cec-8e98-ed8e8698d742?action=share&source=collection_link&creator=49197896"
+	},
+	"item": [
+		{
+			"name": "1. Login User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Helga\",\r\n  \"password\": \"helga\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Helga\",\r\n  \"password\": \"helga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jul 2026 18:54:21 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "232"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc\",\n    \"token_type\": \"bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "2. Get Daftar Assignee (Users)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Get All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jul 2026 19:14:44 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "131"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"39dbf134-1778-43d5-947f-25961e9d338a\",\n        \"username\": \"admin\"\n    },\n    {\n        \"id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\",\n        \"username\": \"Helga\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "3. Get All Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Tasks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jul 2026 19:16:56 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "227"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"6138db4d-a2da-4a7d-876f-1c9a372c0a5c\",\n        \"title\": \"Uji coba edit\",\n        \"description\": \"Latihan\",\n        \"status\": \"In Progress\",\n        \"deadline\": \"2026-07-22T08:45:00\",\n        \"assignee\": {\n            \"id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\",\n            \"username\": \"Helga\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "4. Create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Selesaikan Dokumentasi API\",\r\n  \"description\": \"Membuat collection Postman beserta contoh response\",\r\n  \"status\": \"In Progress\",\r\n  \"deadline\": \"2026-07-24T12:00:00.000Z\",\r\n  \"assignee_id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Create Task",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Selesaikan Dokumentasi API\",\r\n  \"description\": \"Membuat collection Postman beserta contoh response\",\r\n  \"status\": \"In Progress\",\r\n  \"deadline\": \"2026-07-24T12:00:00.000Z\",\r\n  \"assignee_id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jul 2026 19:21:28 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "281"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"5cc9ecd4-aa2c-4955-8013-99a2c4e14303\",\n    \"title\": \"Selesaikan Dokumentasi API\",\n    \"description\": \"Membuat collection Postman beserta contoh response\",\n    \"status\": \"In Progress\",\n    \"deadline\": \"2026-07-24T19:00:00\",\n    \"assignee\": {\n        \"id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\",\n        \"username\": \"Helga\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "5. Update / Edit Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Uji coba edit (Updated)\",\r\n  \"description\": \"Latihan edit via postman\",\r\n  \"status\": \"Done\",\r\n  \"deadline\": \"2026-07-22T08:45:00\",\r\n  \"assignee_id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks/6138db4d-a2da-4a7d-876f-1c9a372c0a5c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						"6138db4d-a2da-4a7d-876f-1c9a372c0a5c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Update / Edit Task",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Uji coba edit (Updated)\",\r\n  \"description\": \"Latihan edit via postman\",\r\n  \"status\": \"Done\",\r\n  \"deadline\": \"2026-07-22T08:45:00\",\r\n  \"assignee_id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/6138db4d-a2da-4a7d-876f-1c9a372c0a5c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"6138db4d-a2da-4a7d-876f-1c9a372c0a5c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jul 2026 19:28:59 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "245"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6138db4d-a2da-4a7d-876f-1c9a372c0a5c\",\n    \"title\": \"Uji coba edit (Updated)\",\n    \"description\": \"Latihan edit via postman\",\n    \"status\": \"Done\",\n    \"deadline\": \"2026-07-22T08:45:00\",\n    \"assignee\": {\n        \"id\": \"9b7b7513-c1ed-4f55-8c45-3302c39f3c75\",\n        \"username\": \"Helga\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "6. Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjdiNzUxMy1jMWVkLTRmNTUtOGM0NS0zMzAyYzM5ZjNjNzUiLCJ1c2VybmFtZSI6IkhlbGdhIiwiZXhwIjoxNzg0ODMyODYxfQ.ncBEgwbAMvL8357-2-XqnNUrXbJJGgg2mP4S0060Vjc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tasks/6138db4d-a2da-4a7d-876f-1c9a372c0a5c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tasks",
+						"6138db4d-a2da-4a7d-876f-1c9a372c0a5c"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Delete Task",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/6138db4d-a2da-4a7d-876f-1c9a372c0a5c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"6138db4d-a2da-4a7d-876f-1c9a372c0a5c"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 22 Jul 2026 19:31:45 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "35"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task berhasil dihapus\"\n}"
+				}
+			]
+		}
+	]
+}
